@@ -1,26 +1,26 @@
 import os
 
-# 1️⃣ Function to Read File Content
+# 1️ Function to Read File Content
 def read_file_content(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         return file.read()
 
-# 2️⃣ Function to Write Content to a File
+# 2️ Function to Write Content to a File
 def write_to_file(file_path, content):
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(content)
 
-# 3️⃣ Function to Find the Longest Word in a File
+# 3️ Function to Find the Longest Word in a File
 def find_longest_word(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         words = file.read().split()
     return max(words, key=len) if words else None
 
-# 4️⃣ Function to Check if a File is Empty
+# 4️ Function to Check if a File is Empty
 def check_file_empty(file_path):
     return os.stat(file_path).st_size == 0  # Returns True if file size is 0
 
-# 5️⃣ Function to Reverse File Content and Save to a New File
+# 5️ Function to Reverse File Content and Save to a New File
 def reverse_file_content(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read()[::-1]  # Reverse content
@@ -29,15 +29,15 @@ def reverse_file_content(file_path):
     with open(new_file_path, 'w', encoding='utf-8') as new_file:
         new_file.write(content)
 
-# 6️⃣ Function to Convert List of Strings to Uppercase Using Lambda
+# 6️ Function to Convert List of Strings to Uppercase Using Lambda
 def convert_to_uppercase(words):
     return list(map(lambda word: word.upper(), words))
 
-# 7️⃣ Function to Filter Even-Length Words Using Lambda
+# 7️ Function to Filter Even-Length Words Using Lambda
 def filter_even_length_words(words):
     return list(filter(lambda word: len(word) % 2 == 0, words))
 
-# 8️⃣ Function to Process a File and Convert Words to Uppercase Using Lambda
+# 8️ Function to Process a File and Convert Words to Uppercase Using Lambda
 def process_file_with_lambda(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         lines = file.readlines()
@@ -47,7 +47,6 @@ def process_file_with_lambda(file_path):
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write("\n".join(processed_lines))
 
-# 🔹 Example Usage
 if __name__ == "__main__":
     file_path = r"C:\Users\DELL.DESKTOP-9SPGAH9\Desktop\LDR 300\Inter.txt"
 
